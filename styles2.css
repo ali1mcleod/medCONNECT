@@ -1,0 +1,155 @@
+body {
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+  background-color: black;
+  color: white;
+
+  /*background-image: url(images/backgroundgif.webp);
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center; */
+
+    /* https://littlesati.tumblr.com/post/135989829708/%D9%81%D9%8A-%D8%AD%D8%A7%D9%84-%D9%83%D9%86%D8%AA-%D8%AA%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86-%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D9%84-if-youre-looking*/
+
+}
+
+h1 {
+  padding-top: 30px;
+  margin: 10px;
+  font-family: 'Silkscreen';
+  font-size: 50px;
+
+}
+
+h2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 10px;
+  font-family: 'Silkscreen';
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.content{
+  font-size: 15px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+  min-width: 70%;
+}
+
+.video {
+  margin: 10px;
+
+
+}
+
+.content2 {
+  font-size: 15px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  min-width: 70%;
+  padding: 10px;
+}
+
+
+div.member {
+  background-color: #F0FFFF ;
+  color: black;
+  text-align: left;
+  padding: 5%;
+  height: 1200px;
+  max-width: 1980px;
+  float: left;
+  font-size-adjust: auto;
+  font-family:'Exo', sans-serif;
+  border-style: groove;
+  overflow: scroll;
+
+}
+
+div.member img {
+  width: 250px;
+  float:left;
+  display: block;
+  padding-right: 15px;
+  background-color: black;
+  padding: 10px;
+  margin: 10px;
+  border-style: inset;
+
+}
+
+div.member2 {
+  background-color: #FFE4C4;
+  color: black;
+  text-align: left;
+  padding: 5%;
+  height: 1200px;
+  float: left;
+  font-family:'Exo', sans-serif;
+  border-style: groove;
+  overflow: scroll;
+  max-width: 1980px;
+}
+
+div.member2 img {
+  width: 250px;
+  float:right;
+  display: block;
+  padding-right: 15px;
+  background-color: black;
+  padding: 10px;
+  margin: 10px;
+  border-style: inset;
+}
+
+
+
+ /* NAV */
+
+ul {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #3c3c3c;
+  text-align: center;
+
+}
+
+li {
+  float: left;
+  background-color: #334d4d;
+  color: white;
+}
+
+li a{
+  background-color: #3c3c3c;
+  color: white;
+  text-decoration: none;
+  padding: 10px 50px;
+  padding-left: 40px;
+  text-align: center;
+  display: inline-block;
+}
+
+li a:hover {
+  background-color:black;
+  color: white;
+}
+
+.home{
+  background-color: lightblue;
+  color: black;
+}
+
+.active {
+  background-color: red;
+  color: white;
+}

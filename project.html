@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+ <html>
+
+  <head>
+
+     <link rel="icon" type="image/x-icon" href="images/favicon.png">
+     <link rel="stylesheet" href="styles4.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Exo&family=Silkscreen&display=swap" rel="stylesheet">
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Project MediKIT </title>
+
+ </head>
+
+<body>
+
+  <ul>
+  <li><a href="aboutus.html" title="Our Group Information">Meet the team</a></li>
+  <li><a href="jobs.html" title="What our jobs say about us">Our Ideal Jobs</a></li>
+  <li><a href="itprof.html" title="Interview with IT Professional">IT Professional Interview</a></li>
+  <li><a href="tech.html" title="IT Technologies" class="active">IT Technologies</a></li>
+  <li><a href="project.html" title="Jake's project">Project <strong>MediKIT</strong></a></li>
+  <li><a href="teams.html" title="Microsoft Teams Usage">Microsoft Teams Usage</a></li>
+  <li><a href="reference.html" title="References">References</a></li>
+  <li style="float:right"><a class="home" href="index.html" title="Home" target="_parent"><strong> &#8962; Home </strong></a></li>
+ </ul>
+
+<h1> Welcome to Project MediKIT </h1>
+<p><strong> Introducing a more efficient and secure form of communication within the medical industry </strong></p>
+
+<div class="tech1">
+<p> Our idea is to create an application network where health professionals and pharmacists can quickly and efficiently communicate with each other for patient-based specialised services and queries. It would focus predominantly on creating a direct line of communication between doctors (in both hospitals and private practices) and pharmacists (in both public and community settings). It would be available on desktop via a cloud service, this would be powered by cloud computing software. The program would also ideally be integrated with existing industry standard software used in the health space.  </p>
+
+<p> This project has come about from personal experience working in the healthcare space. Communication between pharmacists and doctors is practiced already in the industry as it’s such an important part of providing quality care to patients, but the methods used are time consuming and dated. Usually communication is via fax, phone, or email, with additional barriers at each step. A new state-wide system needs to be implemented to vastly improve the time taken out of healthcare workers days trying to communicate sometimes complex problems with one another before coming to a solution.  A review of medication safety from the National Prescribing Service show approximately 6% of hospital admissions are associated with adverse drug events and high error rates during transfer of care. Poor communication was the most important common factor contributing to medication errors. Increased interprofessional collaboration between doctors and pharmacists could therefore reduce the considerable medication-related morbidity and mortality" <i>Easton K. (2009)</i>. </p>
+
+<p> After speaking directly with both pharmacists and a local Doctor, I have found that both would appreciate and benefit from such a system. Put simply, the benefit of this application would be to securely have a direct line of communication between doctors, pharmacists, and other healthcare professionals to avoid any errors. We hope this app will help with common errors that occur due to today's lack of professional communication. Common errors included: Duplication of therapy (either getting two of the same medication or two drugs in the same class). Omitted but necessary medications. Unreported use of herbals or dietary supplements <i>TheConversation.com (2018)</i>. Common mistakes on prescriptions and issues with transferring of care can take up to 48 hours to resolve using today’s industry standard of communication between professionals. </p>
+
+<br>
+<h2> Overview </h2>
+
+<p>The idea for this program is to build an end-to-end encrypted messaging and information service which includes text and images. We thought about including an audio calling service but found this would not be used as everyone uses landlines, and the option to come back to a message or request is ideal for busy professionals. We also find from speaking to pharmacists and doctor’s regarding this idea that they would prefer to have a list of messages to attend to that could be actioned within the app, rather than having to make a bunch of phone calls. Once enrolled, the following healthcare professionals listed will have a direct line with each other: Pharmacists, Doctors practising at Hospitals/Clinics/Private Practices and select administration staff.</p>
+
+<p> This application is beneficial to patients as it takes out the time-consuming task of healthcare professionals trying to communicate through normal means of email, call and fax. Example: A Pharmacist is presented with a script from a patient who has just been discharged from hospital. The pharmacist notices an ingredient in the medication which could cause a potentially fatal drug interaction with the patient’s current medication. They need to contact the doctor to discuss and amend. Current industry practice is to either email the Doctors practice (not the Doctor directly), waiting 24-48 hours for a reply, or call the hospital and be passed from department to department, put on hold, or wait for doctor to call back if they even receive the message from the receptionist. This happens too often and takes too long. Using this system, the pharmacist can search for the doctor, contact them directly and have the discussion cutting out the intermediaries and waiting. The functionality of this app means the doctor can even write a new script, take a photo, and send through to pharmacist for dispensing. In reverse, a doctor or GP might need to discuss or simply request a patients current medication list with the patient’s pharmacist but doesn’t have time to call. As the service is encrypted and only used by registered medical professionals, they can transfer med charts using the messaging feature, so they are not sending confidential information via email or fax. Private patient information is only being seen by the medical professionals and no other staff. The goal of this program is to create clear and confidential lines of communication between pharmacists, doctors, and other medical professionals. </p>
+
+<p> The human and financial cost of medication errors is one of the huge issues facing the medical profession today that we hope to solve with this idea. Discussed by Wolter Skluwer in a post about the benefits of a unified drug information resource. He says that globally medication errors are all too common, with an associated cost of $42 billion reports the World Health Organization. As some pharmacist's report working 12- to 14-hour shifts, it’s imperative they have access to efficient, accurate information to avoid errors and adverse patient outcomes. <i>WolterSkluwer 2022</i> </p>
+
+<br>
+
+<h2>Tools and Tech</h2>
+
+<p> After revision and looking at options, we have decided on creating this app using Amazon Web Services (AWS). There is a few reasons for this, one is that we can utilise all the AWS options available to implement different features that we need, also there is not upfront cost, as Microsoft Azure and others are based on a pay-per-minute model. We will also have the availability to quickly scale this app when more users come on board. Usually when professionals sign up to certain services as a legal requirement of their license, large influxes can occur close to its due date. Along with the option to expand quickly when we need more storage, we also have the benefit of not having to build and pay for servers that we will not be using during the start. There are multiple government programs that run on AWS as the security has been approved by the Australian Cyber Security Centre. As reported by ZDNet, Thursday's deal follows AWS in January receiving certification from the Australian Cyber Security Centre (ACSC), allowing the cloud behemoth to provide storage for highly sensitive government workloads out of its AWS Asia Pacific (Sydney) Region ZDNet 2019 <i>ZDNet 2019</i>. </p>
+
+<p> Most of this program will be built from the ground up on Amazon Web Services IaaS toolset, this will allow cost reductions through efficiencies of scale. If we are successful in building and deploying this service with the help of the State Government, I believe the New South Wales (NSW) State Healthcare Industry would set a new standard for how healthcare professionals provide critical care to patients in Australia. The doctors and pharmacists would have a clear real time channel of communication with each other resulting in better outcomes for patients and avoiding any errors that occur due to breakdown in lines of communication. </p>
+
+<p>The following list shows the AWS tools we would need to use to create this app:
+<p><strong>1.</strong> Amazon SNS - Fast, flexible, fully managed push messaging service.</P>
+<p><strong>2.</strong> Amazon Cognito - Simple and Secure User Sign-Up, Sign-In, and Access Control.</p>
+<p><strong>3.</strong> Amazon Pinpoint - Targeted Push Notifications for Mobile Apps.</p>
+<p><strong>4.</strong> Amazon S3 - Secure, durable, and scalable object storage infrastructure.</p>
+<p><strong>5.</strong> Amazon CloudFront - Web service to distribute content to end users with low latency and high transfer speeds.</p>
+<p><strong>6.</strong> Amazon API Gateway - Publish, maintain, monitor, and secure APIs at any scale.</p>
+<p><strong>7.</strong> Amazon CloudFront - Web service to distribute content to end users with low latency and high transfer speeds.</p>
+<p><strong>8.</strong> Amazon SQS - Scalable queue for storing messages as they travel between computers.</p>
+<p><strong>9.</strong> AWS Amplify Hosting - Fully managed CI/CD and hosting service for fast, secure, and reliable static websites and server-side rendered web apps.</p>
+<p><strong>10.</strong> AWS ChatQL is a tool we would use to implement the ability to send chats.</p>
+
+<p>Based off the AWS Pricing Calculator the running costs at the start and prior to scaling will cost roughly $23,800. We would also in the future work on integrating this program with the government’s web-based program that handles QR Code scripts. This program is called MedView (known by professionals as Flow). Flow is a web application only; it handles the E-Prescriptions which is quickly becoming the industry standard. You can add to the queue of scripts in this application via either third-party apps (patients use) or by scanning the QR Code in using hardware in a pharmacy. Flow does not currently support any option for a Doctor to send a script directly to a pharmacies queue. By only integrating our application with Flow it means we are not only giving Doctors the option to add a prescription to a pharmacies queue, but it also means we would not need to integrate it with any dispensing software which would be hard as there is a few different versions. This will save on costs as well as simplifies the workflow of our app. End-to-end encryption is vital to maintaining patient trust whilst also adhering to Government standards. We hope to achieve this by configuring encryption ie SSL termination at ALB and also self-signed certs in web servers <i>Aravind G V (2018)</i>.</p>
+
+<br>
+
+<h2> Skills Required </h2>
+
+<p>Software development skills are essential for using AWS Infrastructure. Amazon Web Services has Software Development Kit’s (SDK) for various tools each using a different programming language. The most common and relevant to our program is Java, Python, C++ and C#. We must have a basic understanding of these languages before creating this program. When it comes to network infrastructure, we need to understand the basic concepts of the following terms. DNS, TCP/IP, HTTP, CDN, and VPN. This will assist us in building a secure, scalable cloud-based solution.</p>
+
+<p>Learning about storage and how it works within the AWS system will be another thing we will need to research and learn about. “Every software architect needs to know and understand how and when to use databases. In AWS, where you have many data storage options available, you need to be able to know when to use each” <i>CirrusForm (2022)</i>. Amazon Web Services will provide several services and guidelines designed specifically for making sure only designated workers access the AWS account and secure data, along with making sure only registered users can perform specific tasks. “Basic services every AWS architect should know include SQS (simple queuing), SNS (notifications), and RDS (Relational Database Service). Knowledge of more specific ones such as one of the AWS IoT related services is extra helpful” <i>CirrusForm (2022)</i>. “In our experience, it takes around six months of hands-on experience for someone with 1 year of entry-level IT/ Software experience to learn and be awesome at AWS Skills. Moreover, AWS is ever-growing and keeps enhancing its features across all product lines to keep them current. This means that learning does not stop with getting trained or even certified just once.” <i>CirrusForm (2022)</i> </p>
+
+<p>The problem we’re solving with this application affects lives, and the care of patients. By connecting healthcare professionals to each other quickly and efficiently, we hope to bring added value and time to the important work they do. This translates directly to improved patient care and could in the future expand further to a suite of applications that do the same. We hope this project idea is adopted state-wide and eventually nationally. </p>
+
+
+<br>
+
+
+</div>
+
+
+<hr>
+<h3 style="text-align: center; font-size:40px; font-family: 'Silkscreen'; padding: 20px; margin: 20px;"> <i><strong> We are The IT Crowd!</strong></h3>
+<h3> Click <a href="teams.html"> here </a> to view our Microsoft Teams Usage </h3>
+<hr>
+
+</body>
