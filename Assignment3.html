@@ -170,7 +170,7 @@ Once we are satisfied with our application, we need to get the prototype tested 
 <p><strong>AWS Amplify Hosting - Fully managed CI/CD and hosting service for fast, secure, and reliable static websites and server-side rendered web apps.</strong></p>
 <p><strong>AWS ChatQL is a tool we would use to implement the ability to send chats.</strong></p>
 
-<p>As we began trying to research the above list it became clear that we would not have either the time or the required knowledge and skill set to fully develop the application using all of the above.  It would require significant learning on majority of these listings to get a good enough understanding to be able to not just use them but use them well enough to demonstrate our project.  We also explored the use of Microsoft SQL server to create a mock database however as a group decided that we would not require this level of detail for the initial presentation.  In addition, we utilised the services of a work colleague to guide us on the practicality and time required to develop a form of web-based messaging service to actually show the interaction that would occur between a doctor and a chemist, however again it was decided that this would be above our capabilities at this stage. </p>
+<p>As we started trying to research the above list it became clear that we would not have either the time or the required knowledge and skill set to fully develop the application using all of the above.  It would require significant learning on majority of these listings to get a good enough understanding to be able to not just use them but use them well enough to demonstrate our project.  We also explored the use of Microsoft SQL server to create a mock database however as a group decided that we would not require this level of detail for the initial presentation.  In addition, we utilised the services of a work colleague to guide us on the practicality and time required to develop a form of web-based messaging service to actually show the interaction that would occur between a doctor and a chemist, however again it was decided that this would be above our capabilities at this stage. </p>
 
 <p>Instead, what we did do, was first discuss with Pharmacists and Doctors what features would be essential to them in a program such as MedCONNECT. We found that the fundamentals we based our program on, such as simple, secure messaging with the ability to upload either a copy of a paper-based script or E-Script (also known as eRX, which comes in the form of a QR Code) would be the most helpful and make the most sense for them in their day-to-day workflow. I suggested the idea to a local Doctor in Leichhardt if an alert system for overdue messages or requests would be helpful. The feedback received was that this would also need to be an essential part of the system, as Doctors rely heavily on their staff to ensure they are attending all requests sent to them in a timely manner. With a program like MedCONNECT this feature would be baked into the system, and much like a doctor or Pharmacist logging into the software they use each day for their respective professions, MedCONNECT we envision would be much the same. An essential part of their workflow.</p>
 
@@ -235,12 +235,13 @@ User acceptance testing, Approvals from government medical agencies, Provision o
 
 <p>Based off the AWS Pricing Calculator the running costs at the start and prior to scaling will cost roughly $23,800. We would also in the future work on integrating this program with the government’s web-based program that handles QR Code scripts. This program is called MedView (known by professionals as Flow). Flow is a web application only; it handles the Electronic Scripts (also known as eRx) which is quickly becoming the industry standard. You can add to the queue of scripts in this application via either third-party apps (patients use) or by scanning the QR Code in using hardware in a pharmacy. Flow does not currently support any option for a doctor to send a script directly to a pharmacies queue. By only integrating our application with Flow it means we are not only giving Doctors the option to add a prescription to a pharmacies queue, but it also means we would not need to integrate it with any dispensing software which would be hard as there is a few different versions. This will save on costs as well as simplifies the workflow of our app.</p>
 
+<h3>End To End Encryption</h3>
 
 <p>MedConnect is designed to protect sensitive patient data that is shared between pharmacists and doctors; created to function as per best practice models. The Pharmaceutical Society of Australia is the peak body for pharmacists in Australia. Professional Practice Standards ver.5 (2017), published by the PSA, is the guidelines for pharmacists across Australia. On p.13-14, under Standard 1: Fundamental Pharmacy Practice, privacy and confidentiality is a key pillar in the practice of a pharmacist. This includes managing systems that maintain the privacy and confidentiality of the patient.  </p>
 
 <p>The core technology for the protection of patient data is end-to-end encryption (E2EE). End-to-end encryption is essentially a system where only the users can read the messages. This is critical as doctors and pharmacists will use MedConnect to share confidential patient information in a timely manner. End-to-end encryption is vital to maintaining patient trust whilst also adhering to Government standards. As per the National Safety and Quality Health Service (NSQHS) Standards (2022), Action 1.16 states that practitioners should “explicitly recognise the sensitivity of patient clinical information, and the need to protect confidentiality and privacy”. As per Aravind G V (2018), We hope to achieve this by configuring encryption via SSL termination at the AWS Load Balancer and self-signed certificates in web servers as seen below: </p>
 
-<p>INSERT IMAGE HERE</p>
+<p><img src="images/encryptionflow.png" style="float:none; width: 50%; padding-left:30%; max-width: 600px;"></p>
 
 <p>Our project uses Amazon Web Services (AWS) Application Load Balancer (ALB) with 2 Elastic Compute Cloud (EC2) instances. Before end-to end encryption can be implemented, terminating secure connections at the load balancer must be in place. The Application Load Balancer should then be configured with the HTTPS protocol (port 443), with the Listener on the 2 EC2 Instances on port 443 as well. The HTTPS listener, when configured on the ALB, contains SSL offloading signed certificates by which traffic is encrypted between the load balancer and the pharmacists/doctors that initiate a TLS or SSL session. </p>
 
@@ -269,7 +270,7 @@ This report was relayed onto the rest of our group, and Chris noted the recommen
 
 <h2>Timeframe</h2>
 
-<p>Insert Text here</p>
+<p><img src="images/projecttimeline.png" style="float:none; width: 50%; padding-left:30%; max-width: 600px;"></p>
 
 <h2>Risks</h2>
 
@@ -283,7 +284,7 @@ This report was relayed onto the rest of our group, and Chris noted the recommen
 
 <p>To get our MedCONNECT platform well and truly off the ground and held prominently within the medical field as an industry standard, we will require staff to be employed to focus squarely on this project as full-time roles. </p>
 
-<p>INSERT IMAGE HERE</p>
+<p><img src="images/managerflow.png" style="float:none; width: 50%; padding-left:30%; max-width: 600px;"></p>
 
 <p>As outlined, if we were managing this project, we would certainly have members of our IT Crowd acting within this role alongside our four employees about to be listed below. We already know that Daniel and Brett both desire and show the skillsets of managing an IT organisation, and believe that these both teammates could really push our product forward into the medical landscape with precision.  </p>
 
@@ -319,6 +320,34 @@ However, it is recommended by Seek.com’s guidelines to have at least a certifi
 IT CROWD MEMBER BEST SUITED FOR ROLE: Christopher MCLEOD </h3>
 
 <p>Our User Experience and User Interaction (UX/UI) designer and specialist will be critical in conducting the relevant market research alongside our doctors and pharmacists and ensuring that our product is meeting their needs (seek.com, c.2022). They will be communicating and working alongside our full stack developer, and whilst it is the leading role of the full stack developer to ensure the reliability of the platform, our UI/UX specialist is there to ensure that the user experience feels and looks good and meets our collective aim of ensuring the platform is also robust and professional.</p>
+
+<p>During the creation of our minimum viable product to be put forth, prior to sending out MedCONNECT to its first control group, the fundamental aspect of how good the platform feels to use will be vital. No matter how reliable, professional, or robust a platform is, if it is difficult to use or difficult to navigate correctly, then the product will fail.</p>
+
+<p>Via having Chris as someone whose dream job it is to be a digital designer; he would have some knowledge about how to best approach a digital interface which is evident from the MedCONNECT platform we have seen and tested leading up to today. For example, he was given feedback from internal and external resources of testing and subsequently implemented this feedback into his design philisophy of the platform and developed the platform to have a better feel and appearance because of the feedback.</p>
+
+<p>The UI/UX specialist will be making this their full-time role, whilst also ensuring that stakeholders understand the design philosophies and approach of our product whenever issues or queries may arise.
+As Chris has previous experience in the pharmaceutical industry, and experience with Information Technology, he would be a perfect fit for this role. He already has prior knowledge of what is required for MedCONNECT to function correctly and feel good.
+</p>
+
+<p>Seek.com’s guidelines in how to become a UX designer states that you do not require any formal qualifications to be suitable for the roles other than a recommendation that you have a “good eye for design” and a potential consideration for a dedicated postgraduate certification such as a Grad. Certificate in UX/Web design (Seek.com, c.2022).
+However, for a UI designer, it’s recommended that the suitable applicant completes a formal qualification or short course in the graphic/web design and UX field (Seek.com, c.2022).</p>
+
+<p>Jobs that are seeking employees within the UI/UX field are mostly after employees that have had previous UI/UX experience, experience in design and working with a SaaS (Software as a Service) and wireframing tools (Seek.com, 2022).
+Skills that are relevant to MedCONNECT include having Chris utilise his passion and keen eye for web design for our project and respond to feedback regarding how good our platform feels on behalf of the users.
+He will be required to assist our full stack developer (Alistair) in the functionality and design of our upcoming mobile application, as outlined within our future scope</p>
+
+<p>However, whilst these above two roles are critical in the creation of our platform, there is also a crucial factor of security we must consider, given the nature of the platform carrying personal data.</p>
+
+<h3>SERVICE DESK TECHNICIAN (Avg. Annual Salary $65,000) (Seek.com, c.2022)</h3>
+
+<p>The role of a Service Desk Technician is first level support for pharmacists and doctors utilising MedConnect via phone/email/live chat. Their job is to complete basic troubleshooting involving the system including errors within the application, as well as issues with access to the application and messaging. They can also provide guidance to customers regarding how to use MedConnect in their relevant medical/pharmaceutical context.</p>
+
+<p>The Service Desk Technician can also assist with onboarding new customers to the platform by creating accounts for pharmacists and doctors to access the system. They can also modify existing accounts as requested. Their role also would involve receiving feedback from customers of MedConnect and passing on this information to the project team for further improvement.</p>
+
+<p>If the Service Desk Technician cannot resolve the incident for the pharmacists/doctors using MedConnect, they can escalate to an engineer within the team who can provide an expert solution to the problem. They can also assist with coordinating resolution of major incidents for the application by engaging relevant stakeholders to ensure swift resolution of system outages.</p>
+
+<p>We are also fortunate that Daniel has had a lot of previous experience as working as service desk technician and will be able to jump into this role when required if there is any issues surrounding our product.</p>
+
 </div>
 
 <div class="tech1">
