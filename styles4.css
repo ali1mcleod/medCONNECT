@@ -79,6 +79,7 @@ ul {
   overflow: hidden;
   background-color: #3c3c3c;
   text-align: center;
+  z-index: 1;
 
 }
 
